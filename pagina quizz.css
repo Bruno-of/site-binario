@@ -1,0 +1,27 @@
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 35px;
+    justify-content: center;
+}
+
+button{
+    display: inline-block;
+    font-size: 30px;
+    width: 500px;
+    background-color: #0f0d50;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 20px 10px;
+    margin-left: 650px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: 0 0 20px 10px #14203377;
+}
+
+button:hover{
+    transform: scale(1.04);
+    transition: 1.08s;
+}

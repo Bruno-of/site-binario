@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css-geral.css">
+    <link rel="stylesheet" href="quizz.css">
+</head>
+<body>
+    <header class="logo-do-site">
+      <nav>
+          <div class="topo-site">
+              <img alt="Logo Do Site" src="Logo.png">
+              <a href="index.html">Home</a>
+              <a href='historia-binario.html'>História do código binário</a>
+              <a href='explicando-sistema.html'>Explicando o sistema binário</a>
+              <a href="quem-somos.html">Quem somos?</a>
+              <a href="conversor.html">Conversor</a>
+              <a href="quizz.html">Quizz</a>
+          </div>
+      </nav>
+    </header>
+        </nav>
+      </header>
+
+      <h1>Bem vindo ao quizz sobre o sistema binário, espero que você esteja afiado no assunto para tirar a maior pontuação possivel!</h1>
+      <h3>Qual é a base do sistema numérico binário?</h3>
+      <div id="areaA1" onclick="clicar()">A</div>
+
+      <script>
+        var a = document.getElementById('areaA1')
+        a.addEventListener('click', clicar)
+
+        function clicar(){
+            a.style.background = 'red'
+        }
+      </script>
+</body>
+</html>
