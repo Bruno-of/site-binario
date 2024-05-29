@@ -1,0 +1,82 @@
+.introd-quesomos p {
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .introd-quesomos h1 {
+    font-size: 50px;
+  }
+  
+  .introd-quesomos h3 {
+    text-align: center;
+  }
+  
+  .introd-quesomos h2 {
+    font-size: 40px;
+    padding: 100px;
+  }
+  
+  section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  article {
+    padding: 30px 10px;
+    background-color: #142033;
+    width: 300px;
+    border-radius: 20px;
+    flex-direction: column;
+    box-shadow: 0 0 20px 10px #14203377;
+    margin: 30px;
+  }
+  
+  article img {
+    width: 180px;
+    border-radius: 30px;
+    margin: 30px;
+    position: relative;
+  }
+  
+  article p {
+    display: flex;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+  
+  a {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  a:hover {
+      transform: scale(1.07);
+      color: white;
+  }
+  button{
+      background: transparent;
+      color: white;
+      border-radius: 20px;
+      border: 20px;
+  }
+  
+  i {
+      padding: 15px;
+      font-size: 25px;
+      color: #7d81ce;
+      cursor: pointer;
+      transition: 0.7s;
+  }
+  
+  i:hover {
+      transform: scale(1.07);
+      color: white;
+  }
+  
+  h2 {
+      color: #2bbe88;
+  }
