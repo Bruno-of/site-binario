@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <link rel="stylesheet" href="css-geral.css">
+    <link rel="stylesheet" href="conversor.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <script src="conversor.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="logo-do-site">
+        <nav>
+            <div class="topo-site">
+                <img alt="Logo Do Site" src="Logo.png">
+                <a href="index.html">Home</a>
+                <a href='historia-binario.html'>História do código binário</a>
+                <a href='explicando-sistema.html'>Explicando o sistema binário</a>
+                <a href="quem-somos.html">Quem somos?</a>
+                <a href="conversor.html">Conversor</a>
+                <a href="quizz.html">Quizz</a>
+            </div>
+        </nav>
+    </header>
+    <h1>Conversor</h1>
+    <h2>Conversor de Número Decimal/Binário</h2>
+
+    <div class="container">
+        
+        <div class="div1">
+            <h2>Decimal para Binário</h2>
+            <input type="number" id="entradaDecimal" placeholder="Número decimal:">
+            <button onclick="converterDecimalParaBinario()">Converter</button>
+            <p id="resultadoBinario"></p>
+        </div>
+
+        <div class="div1">
+            <h2>Binário para Decimal</h2>
+            <input type="text" id="entradaBinaria" placeholder="Número binário:">
+            <button onclick="converterBinarioParaDecimal()">Converter</button>
+            <p id="resultadoDecimal"></p>
+        </div>
+    </div>
+
+</body>
+</html>
