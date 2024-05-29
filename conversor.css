@@ -1,6 +1,6 @@
 .container {
-    max-width: 400px;
-    margin: 50px auto;
+    width: 100%;
+    margin: 100px 0px 200px 0px;
     display: inline-flex;
     flex-wrap: nowrap;
     justify-content: space-around;
