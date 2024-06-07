@@ -1,38 +1,64 @@
-
-// [Bruno]
 function converterDecimalParaBinario() {
-    // [Bruno] Usei const pra garantir que os valores abaixo não mude
     const entradaDecimal = document.getElementById('entradaDecimal').value;
     const resultadoBinario = document.getElementById('resultadoBinario');
 
-    let numeroDecimal = parseInt(entradaDecimal, 10);
-    let binario = "";
+    let [parteInteira, parteFracionaria] = entradaDecimal.split('.').map(Number);
 
-    if (numeroDecimal === 0) {
-        binario = '0';
+    let binarioInteiro = '';
+    let binarioFracionario = '';
+
+    // Converte a parte inteira para binário
+    if (parteInteira === 0) {
+        binarioInteiro = '0';
     } else {
-        // Converte número decimal para binário
-        while (numeroDecimal > 0) {
-            let resto = numeroDecimal % 2;
-            binario = resto + binario;
-            numeroDecimal = Math.floor(numeroDecimal / 2);
+        while (parteInteira > 0) {
+            let resto = parteInteira % 2;
+            binarioInteiro = resto + binarioInteiro;
+            parteInteira = Math.floor(parteInteira / 2);
         }
     }
 
-    resultadoBinario.innerText = `Binário: ${binario}`;
+    // Converte a parte fracionária para binário
+    if (parteFracionaria) {
+        binarioFracionario = '.';
+        let fracionario = parseFloat('0.' + parteFracionaria);
+        let contagem = 0; // Limita a precisão para evitar loop infinito
+        while (fracionario > 0 && contagem < 20) {
+            fracionario *= 2;
+            if (fracionario >= 1) {
+                binarioFracionario += '1';
+                fracionario -= 1;
+            } else {
+                binarioFracionario += '0';
+            }
+            contagem++;
+        }
+    }
+
+    resultadoBinario.innerText = `Binário: ${binarioInteiro}${binarioFracionario}`;
 }
 
 function converterBinarioParaDecimal() {
     const entradaBinaria = document.getElementById('entradaBinaria').value;
     const resultadoDecimal = document.getElementById('resultadoDecimal');
 
-    let listaBinaria = entradaBinaria.split('').reverse();
-    let soma = 0;
+    let [parteInteira, parteFracionaria] = entradaBinaria.split('.');
 
-    // Converte número binário para decimal
-    for (let i = 0; i < listaBinaria.length; i++) {
-        soma += parseInt(listaBinaria[i], 10) * Math.pow(2, i);
+    let decimalInteiro = 0;
+    let decimalFracionario = 0;
+
+    // Converte a parte inteira para decimal
+    for (let i = 0; i < parteInteira.length; i++) {
+        decimalInteiro += parseInt(parteInteira[i], 10) * Math.pow(2, parteInteira.length - 1 - i);
     }
 
-    resultadoDecimal.innerText = `Decimal: ${soma}`;
+    // Converte a parte fracionária para decimal
+    if (parteFracionaria) {
+        for (let i = 0; i < parteFracionaria.length; i++) {
+            decimalFracionario += parseInt(parteFracionaria[i], 10) * Math.pow(2, -(i + 1));
+        }
+    }
+
+    let decimal = decimalInteiro + decimalFracionario;
+    resultadoDecimal.innerText = `Decimal: ${decimal}`;
 }

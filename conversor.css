@@ -4,25 +4,29 @@
     display: inline-flex;
     flex-wrap: nowrap;
     justify-content: space-around;
+    
 }
 input{
-    background-color: #2bbe88;
+    color: yellow;
+    background-color: #1f3352;
     border: none;
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
-    border-radius: 18%;
+    border-radius: 10%;
     font-family: "Poppins", sans-serif;
     outline: 10;
+    box-shadow: 0px 0px 20px 10px #1d2f4a77;
 }
 ::placeholder {
-    color: rgb(0, 0, 0);
+    color: rgb(222, 215, 31);
     font-family: "Poppins", sans-serif;
   }
 
  button {
+    color: #7d81ce;
     padding: 10px;
     margin: 10px;
-    background-color:#1ab339 ;
+    background-color: yellow ;
     border:none;
     border-radius: 45%;
     font-family: "Poppins", sans-serif;
@@ -37,4 +41,8 @@ button {
 p {
     font-size: 18px;
     margin-top: 20px;
+}
+
+h2 {
+    font-weight: bold;
 }
